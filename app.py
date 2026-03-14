@@ -40,3 +40,7 @@ if submit:
 
 st.write("---")
 st.info("Built by Founders for the Neuro-diverse.")
+
+# Myndly Private Data
+*.csv
+*.log
