@@ -67,7 +67,3 @@ if access_code:
 
 st.write("---")
 st.caption("© 2026 MYNDLY // Built for the Neuro-diverse.")
-
-# Myndly Private Data
-*.csv
-*.log
