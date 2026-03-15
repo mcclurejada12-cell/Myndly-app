@@ -1,16 +1,76 @@
 import streamlit as st
 import pandas as pd
 
-# 1. SET PAGE CONFIG (The tab name and icon)
+# 1. SET PAGE CONFIG
 st.set_page_config(page_title="MYNDLY // ALPHA", page_icon="🧠", layout="centered")
 
-# 2. THE DESIGN (Dark Mode + Founder Blue)
+# 2. THE DESIGN (Luxe-Violet & Deep Space - Matching your Screenshot)
 st.markdown("""
     <style>
-    .stApp { background-color: #0E1117; color: #FFFFFF; }
-    h1 { color: #007AFF; font-family: 'Courier New', monospace; letter-spacing: -2px; font-weight: 800; }
-    .stButton>button { background-color: #007AFF; color: white; border-radius: 8px; width: 100%; font-weight: bold; }
-    .stMetric { background-color: #161B22; border-radius: 10px; padding: 15px; border: 1px solid #30363D; }
+    /* Main Background - Deep Obsidian */
+    .stApp { 
+        background-color: #0A0A0C; 
+        color: #F0F0F5; 
+    }
+    
+    /* Title Styling - Electric Violet with Glow */
+    h1 { 
+        color: #A855F7; 
+        font-family: 'Inter', sans-serif; 
+        letter-spacing: -3px; 
+        font-weight: 900; 
+        text-transform: uppercase;
+        text-shadow: 0px 0px 20px rgba(168, 85, 247, 0.4);
+        padding-top: 20px;
+    }
+
+    /* Subheader - Soft Lilac */
+    h3 { 
+        color: #D8B4FE; 
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    /* The Button - Violet Gradient with Hover Glow */
+    .stButton>button { 
+        background: linear-gradient(90deg, #7C3AED, #A855F7);
+        color: white; 
+        border-radius: 12px; 
+        border: none;
+        padding: 15px;
+        font-weight: 700;
+        transition: 0.3s;
+        box-shadow: 0px 4px 15px rgba(124, 58, 237, 0.3);
+        width: 100%;
+    }
+    
+    .stButton>button:hover {
+        box-shadow: 0px 0px 25px rgba(168, 85, 247, 0.6);
+        transform: translateY(-2px);
+        color: white;
+    }
+
+    /* Metrics / Cards - Glassmorphism Panels */
+    [data-testid="stMetric"] { 
+        background-color: #16161E; 
+        border-radius: 15px; 
+        padding: 20px; 
+        border: 1px solid #2D2D39;
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* Input Box Styling */
+    .stTextInput>div>div>input {
+        background-color: #1A1A24;
+        color: #FFFFFF;
+        border: 1px solid #3F3F46;
+        border-radius: 10px;
+    }
+
+    /* Divider color */
+    hr {
+        border-color: #2D2D39;
+    }
     </style>
     """, unsafe_allow_html=True)
 
